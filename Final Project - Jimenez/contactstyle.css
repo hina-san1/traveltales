@@ -1,0 +1,425 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lobster+Two:wght@700&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Lobster+Two:wght@700&family=Poppins:wght@500&display=swap');
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-image: url('images used/navbackground.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 9.5% 10% 1fr 1fr;
+    grid-template-areas:
+        "navigation"
+        "main";
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/* Navigation Bar */
+.navigation {
+    grid-area: navigation;
+    background-color: white;
+    position: fixed;
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.481);
+}
+
+#logo {
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 50px;
+    position: relative;
+    bottom: 5px;
+}
+
+.link {
+    margin: 40px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: 'Poppins';
+    color: white;
+    background-color: rgb(90, 214, 255);
+    border: solid rgb(0, 158, 211);
+    padding: 5px 10px;
+    border-radius: 25px;
+    transition: 0.2s;
+}
+
+.link:hover {
+    font-weight: bolder;
+    color: rgb(0, 158, 211);
+    padding: 10px 15px;
+    box-shadow: 0 0 5px rgb(64, 207, 255),
+        0 0 25px rgb(64, 207, 255),
+        0 0 50px rgb(64, 207, 255),
+        0 0 200px rgb(64, 207, 255),
+        0 0 400px rgb(64, 207, 255),
+        0 0 800px rgb(64, 207, 255);
+}
+
+.link:active {
+    font-size: 15px;
+    color: rgb(0, 142, 190);
+    background-color: rgb(0, 191, 255);
+}
+
+#contact{
+    color: white;
+    background-color: rgb(0, 137, 183);
+}
+
+#explore {
+    font-family: 'Poppins';
+    color: white;
+    padding: 5px 10px;
+    border-radius: 25px;
+    background-color: rgb(255, 241, 84);
+    border: solid rgb(214, 196, 0);
+    transition: 0.2s;
+}
+
+#explore:hover {
+    font-weight: bolder;
+    color: rgb(214, 196, 0);
+    padding: 10px 15px;
+    box-shadow: 0 0 5px rgb(255, 234, 0),
+        0 0 25px rgb(255, 234, 0),
+        0 0 50px rgb(255, 234, 0),
+        0 0 200px rgb(255, 234, 0),
+        0 0 400px rgb(255, 234, 0),
+        0 0 800px rgb(255, 234, 0);
+}
+
+#explore:active {
+    color: rgb(198, 181, 0);
+    background-color: rgb(250, 229, 0);
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/* Main-Content */
+.main {
+    margin: 15px;
+    grid-area: main;
+    height: 89.5VH;
+    display: grid;
+    grid-template-rows: 20% repeat(2, 1fr);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: 'Archivo Black';
+    letter-spacing: 3px;
+}
+
+h1 {
+    position: relative;
+    bottom: 10px;
+}
+
+.icon-top {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.icon-bottom {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.icon {
+    height: 130px;
+    border-radius: 20px;
+    transition: 0.2s
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+#instagram {
+    border-radius: 30px;
+}
+
+h3 {
+    font-family: 'Poppins';
+    position: relative;
+    top: 30px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/* Responsive Layout */
+@media (max-width: 1307px) {
+    .link {
+        margin: 20px;
+    }
+}
+
+@media (max-width: 1110px) {
+    .navigation {
+        justify-content: center;
+    }
+
+    .link {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 957px) {
+    #logo {
+        margin: 0;
+    }
+}
+
+@media (max-width: 860px) {
+    .navigation {
+        height: 140px;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .link-container {
+        position: absolute;
+        top: 65%;
+    }
+
+    #logo {
+        position: relative;
+        top: 10px;
+    }
+}
+
+@media (max-width: 602px) {
+    .link {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 415px) {
+    p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 1275px) {
+    .main {
+        flex-direction: column;
+        position: relative;
+        top: 50px;
+    }
+
+    p {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/* Animation */
+@keyframes facebooklight {
+    0% {
+        box-shadow: 0 0 25px rgb(82, 174, 235),
+            0 0 25px rgb(82, 174, 235),
+            0 0 25px rgb(82, 174, 235),
+            0 0 25px rgb(82, 174, 235),
+            0 0 25px rgb(82, 174, 235),
+            0 0 25px rgb(82, 174, 235),
+            0 0 25px rgb(82, 174, 235);
+    }
+
+    50% {
+        box-shadow: 0 0 5px rgb(69, 181, 255),
+            0 0 25px rgb(69, 181, 255),
+            0 0 50px rgb(69, 181, 255),
+            0 0 200px rgb(69, 181, 255),
+            0 0 400px rgb(69, 181, 255),
+            0 0 800px rgb(69, 181, 255);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgb(0, 131, 218),
+            0 0 25px rgb(0, 131, 218),
+            0 0 50px rgb(0, 131, 218),
+            0 0 200px rgb(0, 131, 218),
+            0 0 400px rgb(0, 131, 218),
+            0 0 800px rgb(0, 131, 218);
+    }
+}
+
+@keyframes instagramlight {
+    0% {
+        box-shadow: 0 0 25px rgb(255, 126, 253),
+            0 0 25px rgb(255, 126, 253),
+            0 0 25px rgb(255, 126, 253),
+            0 0 25px rgb(255, 126, 253),
+            0 0 25px rgb(255, 126, 253),
+            0 0 25px rgb(255, 126, 253),
+            0 0 25px rgb(255, 126, 253);
+    }
+
+    50% {
+        box-shadow: 0 0 5px rgb(136, 0, 255),
+            0 0 25px rgb(136, 0, 255),
+            0 0 50px rgb(136, 0, 255),
+            0 0 200px rgb(136, 0, 255),
+            0 0 400px rgb(136, 0, 255),
+            0 0 800px rgb(136, 0, 255);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgb(255, 243, 106),
+            0 0 25px rgb(255, 243, 106),
+            0 0 50px rgb(255, 243, 106),
+            0 0 200px rgb(255, 243, 106),
+            0 0 400px rgb(255, 243, 106),
+            0 0 800px rgb(255, 243, 106);
+    }
+}
+
+@keyframes twitterlight {
+    0% {
+        box-shadow: 0 0 25px rgb(82, 174, 235),
+            0 0 25px rgb(82, 174, 235),
+            0 0 25px rgb(82, 174, 235),
+            0 0 25px rgb(82, 174, 235),
+            0 0 25px rgb(82, 174, 235),
+            0 0 25px rgb(82, 174, 235),
+            0 0 25px rgb(82, 174, 235);
+    }
+
+    50% {
+        box-shadow: 0 0 5px rgb(69, 181, 255),
+            0 0 25px rgb(69, 181, 255),
+            0 0 50px rgb(69, 181, 255),
+            0 0 200px rgb(69, 181, 255),
+            0 0 400px rgb(69, 181, 255),
+            0 0 800px rgb(69, 181, 255);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgb(0, 131, 218),
+            0 0 25px rgb(0, 131, 218),
+            0 0 50px rgb(0, 131, 218),
+            0 0 200px rgb(0, 131, 218),
+            0 0 400px rgb(0, 131, 218),
+            0 0 800px rgb(0, 131, 218);
+    }
+}
+
+@keyframes gmaillight {
+    0% {
+        box-shadow: 0 0 25px rgb(255, 126, 126),
+            0 0 25px rgb(255, 126, 126),
+            0 0 25px rgb(255, 126, 126),
+            0 0 25px rgb(255, 126, 126),
+            0 0 25px rgb(255, 126, 126),
+            0 0 25px rgb(255, 126, 126),
+            0 0 25px rgb(255, 126, 126);
+    }
+
+    50% {
+        box-shadow: 0 0 5px rgb(255, 83, 83),
+            0 0 25px rgb(255, 83, 83),
+            0 0 50px rgb(255, 83, 83),
+            0 0 200px rgb(255, 83, 83),
+            0 0 400px rgb(255, 83, 83),
+            0 0 800px rgb(255, 83, 83);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgb(255, 22, 22),
+            0 0 25px rgb(255, 22, 22),
+            0 0 50px rgb(255, 22, 22),
+            0 0 200px rgb(255, 22, 22),
+            0 0 400px rgb(255, 22, 22),
+            0 0 800px rgb(255, 22, 22);
+    }
+}
+
+@keyframes phonelight {
+    0% {
+        box-shadow: 0 0 25px rgb(128, 255, 126),
+            0 0 25px rgb(128, 255, 126),
+            0 0 25px rgb(128, 255, 126),
+            0 0 25px rgb(128, 255, 126),
+            0 0 25px rgb(128, 255, 126),
+            0 0 25px rgb(128, 255, 126),
+            0 0 25px rgb(128, 255, 126);
+    }
+
+    50% {
+        box-shadow: 0 0 5px rgb(91, 255, 88),
+            0 0 25px rgb(128, 255, 126),
+            0 0 50px rgb(128, 255, 126),
+            0 0 200px rgb(128, 255, 126),
+            0 0 400px rgb(128, 255, 126),
+            0 0 800px rgb(128, 255, 126);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgb(44, 255, 40),
+            0 0 25px rgb(44, 255, 40),
+            0 0 50px rgb(44, 255, 40),
+            0 0 200px rgb(44, 255, 40),
+            0 0 400px rgb(44, 255, 40),
+            0 0 800px rgb(44, 255, 40);
+    }
+}
+
+#facebook {
+    animation-name: facebooklight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+#instagram {
+    animation-name: instagramlight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+#twitter {
+    animation-name: twitterlight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+#gmail {
+    animation-name: gmaillight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+#phone {
+    animation-name: phonelight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}

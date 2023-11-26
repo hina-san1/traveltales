@@ -1,0 +1,275 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lobster+Two:wght@700&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Lobster+Two:wght@700&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Archivo+Black&family=Lobster+Two:wght@700&family=Poppins:wght@500&display=swap');
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-image: url('images used/navbackground.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-areas:
+        "navigation main";
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/* Navigation Bar */
+.navigation {
+    grid-area: navigation;
+    position: fixed;
+    height: 100%;
+    width: 20%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.481);
+}
+
+#logo {
+    width: 250px;
+    position: relative;
+    top: 20px;
+}
+
+.link-container {
+    position: relative;
+    top: 11%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    margin: 40px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: 'Poppins';
+    color: white;
+    background-color: rgb(90, 214, 255);
+    border: solid rgb(0, 158, 211);
+    padding: 10px 5px;
+    border-radius: 25px;
+    transition: 0.2s;
+}
+
+.link:hover {
+    transform: scale(1.1);
+    font-weight: bolder;
+    color: rgb(0, 158, 211);
+    box-shadow: 0 0 5px rgb(64, 207, 255),
+        0 0 25px rgb(64, 207, 255),
+        0 0 50px rgb(64, 207, 255),
+        0 0 200px rgb(64, 207, 255),
+        0 0 400px rgb(64, 207, 255),
+        0 0 800px rgb(64, 207, 255);
+}
+
+.link:active {
+    transform: none;
+    color: rgb(0, 142, 190);
+    background-color: rgb(0, 191, 255);
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/* Main-Content */
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title {
+    font-size: 60px;
+    font-family: 'Agbalumo';
+    color: #ffbf00;
+    position: relative;
+    top: 50px;
+}
+
+.images {
+    height: 100%;
+    position: relative;
+    top: 180px;
+}
+
+.image {
+    border-radius: 50px;
+}
+
+.beach-name {
+    font-family: 'Archivo Black';
+    font-weight: bolder;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Poppins';
+    line-height: 50px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/* Responsive Layout Navigation Bar */
+@media (max-width: 1320px) {
+    #logo {
+        width: 200px;
+    }
+
+    .link {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1032px) {
+    #logo {
+        width: 150px;
+    }
+
+    .link {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    #logo {
+        width: 90px;
+    }
+
+    .link {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+@media (max-height: 515px) and (max-width: 500px) {
+    .link {
+        margin: 30px;
+    }
+}
+
+@media (max-height: 435px) and (max-width: 500px) {
+    .link {
+        margin: 15px;
+    }
+}
+
+@media (max-height: 320px) and (max-width: 500px) {
+    .link {
+        margin: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    p {
+        font-size: 8px;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/* Responsive Layout Main Content */
+@media (max-width: 1120px) {
+    .image {
+        width: 250px;
+    }
+
+    .beach-name {
+        font-size: 20px;
+    }
+
+    p {
+        line-height: 30px;
+        font-size: 15px;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/* Animation */
+@keyframes light {
+    0% {
+        box-shadow: 0 0 5px rgb(155, 230, 255),
+            0 0 25px rgb(155, 230, 255),
+            0 0 50px rgb(155, 230, 255),
+            0 0 200px rgb(155, 230, 255),
+            0 0 400px rgb(155, 230, 255),
+            0 0 800px rgb(155, 230, 255);
+    }
+
+    30% {
+        box-shadow: 0 0 5px rgb(255, 152, 231),
+            0 0 25px rgb(255, 152, 231),
+            0 0 50px rgb(255, 152, 231),
+            0 0 200px rgb(255, 152, 231),
+            0 0 400px rgb(255, 152, 231),
+            0 0 800px rgb(255, 152, 231);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgb(255, 253, 139),
+            0 0 25px rgb(255, 253, 139),
+            0 0 50px rgb(255, 253, 139),
+            0 0 200px rgb(255, 253, 139),
+            0 0 400px rgb(255, 253, 139),
+            0 0 800px rgb(255, 253, 139);
+    }
+}
+
+.image {
+    animation-name: light;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    box-sizing: border-box;
+    border-radius: 50px;
+}
+
+@keyframes navigation-light {
+    0% {
+        box-shadow: 0 0 5px rgb(155, 230, 255),
+            0 0 25px rgb(155, 230, 255),
+            0 0 50px rgb(155, 230, 255),
+            0 0 200px rgb(155, 230, 255),
+            0 0 400px rgb(155, 230, 255),
+            0 0 800px rgb(155, 230, 255);
+    }
+
+    30% {
+        box-shadow: 0 0 5px rgb(73, 210, 255),
+            0 0 25px rgb(73, 210, 255),
+            0 0 50px rgb(73, 210, 255),
+            0 0 200px rgb(73, 210, 255),
+            0 0 400px rgb(73, 210, 255),
+            0 0 800px rgb(73, 210, 255);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgb(0, 178, 238),
+            0 0 25px rgb(0, 178, 238),
+            0 0 50px rgb(0, 178, 238),
+            0 0 200px rgb(0, 178, 238),
+            0 0 400px rgb(0, 178, 238),
+            0 0 800px rgb(0, 178, 238);
+    }
+}
+
+.navigation {
+    animation-name: navigation-light;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}

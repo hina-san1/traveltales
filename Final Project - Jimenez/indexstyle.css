@@ -1,0 +1,170 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lobster+Two:wght@700&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lobster+Two:wght@700&family=Poppins:wght@500&display=swap');
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-image: url('images used/homepagebackground.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    border-radius: 100px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+}
+
+.main {
+    display: grid;
+    grid-template-rows: 10% repeat(3, 1fr);
+}
+
+.flexboxlogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 45px;
+}
+
+.logo img {
+    position: relative;
+    top: 20px;
+}
+
+.flexboxparagraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paragraph {
+    font-size: 25px;
+    font-family: 'Lobster Two';
+    color: #ffbf00;
+}
+
+.flexboxtopic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#beach {
+    box-sizing: border-box;
+    border-radius: 50px;
+}
+
+.topic img {
+    height: 220px;
+}
+
+.flexboxbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button a {
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 30px;
+    font-family: 'Poppins';
+    color: white;
+    background-color: rgb(255, 241, 84);
+    border: solid rgb(214, 196, 0);
+    padding: 25px 30px;
+    border-radius: 45px;
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.481);
+    transition: 0.2s;
+}
+
+.button a:hover {
+    font-weight: bolder;
+    color: rgb(214, 196, 0);
+    padding: 30px 35px;
+    box-shadow: 0 0 5px rgb(255, 234, 0),
+        0 0 25px rgb(255, 234, 0),
+        0 0 50px rgb(255, 234, 0),
+        0 0 200px rgb(255, 234, 0),
+        0 0 400px rgb(255, 234, 0),
+        0 0 800px rgb(255, 234, 0);
+}
+
+.button a:active {
+    font-size: 25px;
+    color: rgb(198, 181, 0);
+    background-color: rgb(250, 229, 0);
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/* Responsive Layout */
+@media (max-width: 1012px) {
+    body {
+        grid-template-columns: 100%;
+    }
+
+    .paragraph {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 638px) and (max-height: 730.40px) {
+    body {
+        background-image: none;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/* Animation */
+@keyframes light {
+    0% {
+        box-shadow: 0 0 5px rgb(64, 207, 255),
+            0 0 25px rgb(64, 207, 255),
+            0 0 50px rgb(64, 207, 255),
+            0 0 200px rgb(64, 207, 255),
+            0 0 400px rgb(64, 207, 255),
+            0 0 800px rgb(64, 207, 255);
+    }
+
+    30% {
+        box-shadow: 0 0 5px rgb(64, 207, 255),
+            0 0 25px rgb(0, 191, 255),
+            0 0 50px rgb(0, 191, 255),
+            0 0 200px rgb(0, 191, 255),
+            0 0 400px rgb(0, 191, 255),
+            0 0 800px rgb(0, 191, 255);
+    }
+
+    50% {
+        box-shadow: 0 0 5px rgb(0, 158, 211),
+            0 0 25px rgb(0, 158, 211),
+            0 0 50px rgb(0, 158, 211),
+            0 0 200px rgb(0, 158, 211),
+            0 0 400px rgb(0, 158, 211),
+            0 0 800px rgb(0, 158, 211);
+    }
+
+}
+
+#beach {
+    animation-name: light;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+body {
+    animation-name: light;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
